@@ -1,0 +1,947 @@
+[
+    {
+        "comp_display_name": "alpha-Ketoglutarate",
+        "comp_abbr": "AKG",
+        "control_name": "H2O",
+        "strain_name": "AF16",
+        "pub": "Lucanic M, et al. (2017)",
+        "doi": "10.1038/ncomms14256",
+        "pubchem_id": 164533
+    },
+    {
+        "comp_display_name": "alpha-Ketoglutarate",
+        "comp_abbr": "AKG",
+        "control_name": "H2O",
+        "strain_name": "HK104",
+        "pub": "Lucanic M, et al. (2017)",
+        "doi": "10.1038/ncomms14256",
+        "pubchem_id": 164533
+    },
+    {
+        "comp_display_name": "alpha-Ketoglutarate",
+        "comp_abbr": "AKG",
+        "control_name": "H2O",
+        "strain_name": "JU1348",
+        "pub": "Lucanic M, et al. (2017)",
+        "doi": "10.1038/ncomms14256",
+        "pubchem_id": 164533
+    },
+    {
+        "comp_display_name": "alpha-Ketoglutarate",
+        "comp_abbr": "AKG",
+        "control_name": "H2O",
+        "strain_name": "JU775",
+        "pub": "Lucanic M, et al. (2017)",
+        "doi": "10.1038/ncomms14256",
+        "pubchem_id": 164533
+    },
+    {
+        "comp_display_name": "alpha-Ketoglutarate",
+        "comp_abbr": "AKG",
+        "control_name": "H2O",
+        "strain_name": "MY16",
+        "pub": "Lucanic M, et al. (2017)",
+        "doi": "10.1038/ncomms14256",
+        "pubchem_id": 164533
+    },
+    {
+        "comp_display_name": "alpha-Ketoglutarate",
+        "comp_abbr": "AKG",
+        "control_name": "H2O",
+        "strain_name": "N2",
+        "pub": "Lucanic M, et al. (2017)",
+        "doi": "10.1038/ncomms14256",
+        "pubchem_id": 164533
+    },
+    {
+        "comp_display_name": "alpha-Lipoic acid",
+        "comp_abbr": "ALA",
+        "control_name": "H2O",
+        "strain_name": "AF16",
+        "pub": "Lucanic M, et al. (2017)",
+        "doi": "10.1038/ncomms14256",
+        "pubchem_id": 864
+    },
+    {
+        "comp_display_name": "alpha-Lipoic acid",
+        "comp_abbr": "ALA",
+        "control_name": "H2O",
+        "strain_name": "HK104",
+        "pub": "Lucanic M, et al. (2017)",
+        "doi": "10.1038/ncomms14256",
+        "pubchem_id": 864
+    },
+    {
+        "comp_display_name": "alpha-Lipoic acid",
+        "comp_abbr": "ALA",
+        "control_name": "H2O",
+        "strain_name": "JU1348",
+        "pub": "Lucanic M, et al. (2017)",
+        "doi": "10.1038/ncomms14256",
+        "pubchem_id": 864
+    },
+    {
+        "comp_display_name": "alpha-Lipoic acid",
+        "comp_abbr": "ALA",
+        "control_name": "H2O",
+        "strain_name": "JU775",
+        "pub": "Lucanic M, et al. (2017)",
+        "doi": "10.1038/ncomms14256",
+        "pubchem_id": 864
+    },
+    {
+        "comp_display_name": "alpha-Lipoic acid",
+        "comp_abbr": "ALA",
+        "control_name": "H2O",
+        "strain_name": "MY16",
+        "pub": "Lucanic M, et al. (2017)",
+        "doi": "10.1038/ncomms14256",
+        "pubchem_id": 864
+    },
+    {
+        "comp_display_name": "alpha-Lipoic acid",
+        "comp_abbr": "ALA",
+        "control_name": "H2O",
+        "strain_name": "N2",
+        "pub": "Lucanic M, et al. (2017)",
+        "doi": "10.1038/ncomms14256",
+        "pubchem_id": 864
+    },
+    {
+        "comp_display_name": "Aspirin",
+        "comp_abbr": "ASP",
+        "control_name": "DMSO",
+        "strain_name": "AF16",
+        "pub": "Lucanic M, et al. (2017)",
+        "doi": "10.1038/ncomms14256",
+        "pubchem_id": 2244
+    },
+    {
+        "comp_display_name": "Aspirin",
+        "comp_abbr": "ASP",
+        "control_name": "DMSO",
+        "strain_name": "HK104",
+        "pub": "Lucanic M, et al. (2017)",
+        "doi": "10.1038/ncomms14256",
+        "pubchem_id": 2244
+    },
+    {
+        "comp_display_name": "Aspirin",
+        "comp_abbr": "ASP",
+        "control_name": "DMSO",
+        "strain_name": "JU1348",
+        "pub": "Lucanic M, et al. (2017)",
+        "doi": "10.1038/ncomms14256",
+        "pubchem_id": 2244
+    },
+    {
+        "comp_display_name": "Aspirin",
+        "comp_abbr": "ASP",
+        "control_name": "DMSO",
+        "strain_name": "JU775",
+        "pub": "Lucanic M, et al. (2017)",
+        "doi": "10.1038/ncomms14256",
+        "pubchem_id": 2244
+    },
+    {
+        "comp_display_name": "Aspirin",
+        "comp_abbr": "ASP",
+        "control_name": "DMSO",
+        "strain_name": "MY16",
+        "pub": "Lucanic M, et al. (2017)",
+        "doi": "10.1038/ncomms14256",
+        "pubchem_id": 2244
+    },
+    {
+        "comp_display_name": "Aspirin",
+        "comp_abbr": "ASP",
+        "control_name": "DMSO",
+        "strain_name": "N2",
+        "pub": "Lucanic M, et al. (2017)",
+        "doi": "10.1038/ncomms14256",
+        "pubchem_id": 2244
+    },
+    {
+        "comp_display_name": "Curcumin",
+        "comp_abbr": "CURC",
+        "control_name": "DMSO",
+        "strain_name": "AF16",
+        "pub": "Lucanic M, et al. (2017)",
+        "doi": "10.1038/ncomms14256",
+        "pubchem_id": 969516
+    },
+    {
+        "comp_display_name": "Curcumin",
+        "comp_abbr": "CURC",
+        "control_name": "DMSO",
+        "strain_name": "HK104",
+        "pub": "Lucanic M, et al. (2017)",
+        "doi": "10.1038/ncomms14256",
+        "pubchem_id": 969516
+    },
+    {
+        "comp_display_name": "Curcumin",
+        "comp_abbr": "CURC",
+        "control_name": "DMSO",
+        "strain_name": "JU1348",
+        "pub": "Lucanic M, et al. (2017)",
+        "doi": "10.1038/ncomms14256",
+        "pubchem_id": 969516
+    },
+    {
+        "comp_display_name": "Curcumin",
+        "comp_abbr": "CURC",
+        "control_name": "DMSO",
+        "strain_name": "JU775",
+        "pub": "Lucanic M, et al. (2017)",
+        "doi": "10.1038/ncomms14256",
+        "pubchem_id": 969516
+    },
+    {
+        "comp_display_name": "Curcumin",
+        "comp_abbr": "CURC",
+        "control_name": "DMSO",
+        "strain_name": "MY16",
+        "pub": "Lucanic M, et al. (2017)",
+        "doi": "10.1038/ncomms14256",
+        "pubchem_id": 969516
+    },
+    {
+        "comp_display_name": "Curcumin",
+        "comp_abbr": "CURC",
+        "control_name": "DMSO",
+        "strain_name": "N2",
+        "pub": "Lucanic M, et al. (2017)",
+        "doi": "10.1038/ncomms14256",
+        "pubchem_id": 969516
+    },
+    {
+        "comp_display_name": "NP1",
+        "comp_abbr": "NP1",
+        "control_name": "DMSO",
+        "strain_name": "AF16",
+        "pub": "Lucanic M, et al. (2017)",
+        "doi": "10.1038/ncomms14256",
+        "pubchem_id": null
+    },
+    {
+        "comp_display_name": "NP1",
+        "comp_abbr": "NP1",
+        "control_name": "DMSO",
+        "strain_name": "HK104",
+        "pub": "Lucanic M, et al. (2017)",
+        "doi": "10.1038/ncomms14256",
+        "pubchem_id": null
+    },
+    {
+        "comp_display_name": "NP1",
+        "comp_abbr": "NP1",
+        "control_name": "DMSO",
+        "strain_name": "JU1348",
+        "pub": "Lucanic M, et al. (2017)",
+        "doi": "10.1038/ncomms14256",
+        "pubchem_id": null
+    },
+    {
+        "comp_display_name": "NP1",
+        "comp_abbr": "NP1",
+        "control_name": "DMSO",
+        "strain_name": "JU775",
+        "pub": "Lucanic M, et al. (2017)",
+        "doi": "10.1038/ncomms14256",
+        "pubchem_id": null
+    },
+    {
+        "comp_display_name": "NP1",
+        "comp_abbr": "NP1",
+        "control_name": "DMSO",
+        "strain_name": "MY16",
+        "pub": "Lucanic M, et al. (2017)",
+        "doi": "10.1038/ncomms14256",
+        "pubchem_id": null
+    },
+    {
+        "comp_display_name": "NP1",
+        "comp_abbr": "NP1",
+        "control_name": "DMSO",
+        "strain_name": "N2",
+        "pub": "Lucanic M, et al. (2017)",
+        "doi": "10.1038/ncomms14256",
+        "pubchem_id": null
+    },
+    {
+        "comp_display_name": "Propyl gallate",
+        "comp_abbr": "PG",
+        "control_name": "DMSO",
+        "strain_name": "AF16",
+        "pub": "Lucanic M, et al. (2017)",
+        "doi": "10.1038/ncomms14256",
+        "pubchem_id": 4947
+    },
+    {
+        "comp_display_name": "Propyl gallate",
+        "comp_abbr": "PG",
+        "control_name": "DMSO",
+        "strain_name": "HK104",
+        "pub": "Lucanic M, et al. (2017)",
+        "doi": "10.1038/ncomms14256",
+        "pubchem_id": 4947
+    },
+    {
+        "comp_display_name": "Propyl gallate",
+        "comp_abbr": "PG",
+        "control_name": "DMSO",
+        "strain_name": "JU1348",
+        "pub": "Lucanic M, et al. (2017)",
+        "doi": "10.1038/ncomms14256",
+        "pubchem_id": 4947
+    },
+    {
+        "comp_display_name": "Propyl gallate",
+        "comp_abbr": "PG",
+        "control_name": "DMSO",
+        "strain_name": "JU775",
+        "pub": "Lucanic M, et al. (2017)",
+        "doi": "10.1038/ncomms14256",
+        "pubchem_id": 4947
+    },
+    {
+        "comp_display_name": "Propyl gallate",
+        "comp_abbr": "PG",
+        "control_name": "DMSO",
+        "strain_name": "MY16",
+        "pub": "Lucanic M, et al. (2017)",
+        "doi": "10.1038/ncomms14256",
+        "pubchem_id": 4947
+    },
+    {
+        "comp_display_name": "Propyl gallate",
+        "comp_abbr": "PG",
+        "control_name": "DMSO",
+        "strain_name": "N2",
+        "pub": "Lucanic M, et al. (2017)",
+        "doi": "10.1038/ncomms14256",
+        "pubchem_id": 4947
+    },
+    {
+        "comp_display_name": "Quercetin",
+        "comp_abbr": "QUER",
+        "control_name": "DMSO",
+        "strain_name": "AF16",
+        "pub": "Lucanic M, et al. (2017)",
+        "doi": "10.1038/ncomms14256",
+        "pubchem_id": 5280343
+    },
+    {
+        "comp_display_name": "Quercetin",
+        "comp_abbr": "QUER",
+        "control_name": "DMSO",
+        "strain_name": "HK104",
+        "pub": "Lucanic M, et al. (2017)",
+        "doi": "10.1038/ncomms14256",
+        "pubchem_id": 5280343
+    },
+    {
+        "comp_display_name": "Quercetin",
+        "comp_abbr": "QUER",
+        "control_name": "DMSO",
+        "strain_name": "JU1348",
+        "pub": "Lucanic M, et al. (2017)",
+        "doi": "10.1038/ncomms14256",
+        "pubchem_id": 5280343
+    },
+    {
+        "comp_display_name": "Quercetin",
+        "comp_abbr": "QUER",
+        "control_name": "DMSO",
+        "strain_name": "JU775",
+        "pub": "Lucanic M, et al. (2017)",
+        "doi": "10.1038/ncomms14256",
+        "pubchem_id": 5280343
+    },
+    {
+        "comp_display_name": "Quercetin",
+        "comp_abbr": "QUER",
+        "control_name": "DMSO",
+        "strain_name": "MY16",
+        "pub": "Lucanic M, et al. (2017)",
+        "doi": "10.1038/ncomms14256",
+        "pubchem_id": 5280343
+    },
+    {
+        "comp_display_name": "Quercetin",
+        "comp_abbr": "QUER",
+        "control_name": "DMSO",
+        "strain_name": "N2",
+        "pub": "Lucanic M, et al. (2017)",
+        "doi": "10.1038/ncomms14256",
+        "pubchem_id": 5280343
+    },
+    {
+        "comp_display_name": "Resveratrol",
+        "comp_abbr": "RSVTL",
+        "control_name": "DMSO",
+        "strain_name": "AF16",
+        "pub": "Lucanic M, et al. (2017)",
+        "doi": "10.1038/ncomms14256",
+        "pubchem_id": 445154
+    },
+    {
+        "comp_display_name": "Resveratrol",
+        "comp_abbr": "RSVTL",
+        "control_name": "DMSO",
+        "strain_name": "HK104",
+        "pub": "Lucanic M, et al. (2017)",
+        "doi": "10.1038/ncomms14256",
+        "pubchem_id": 445154
+    },
+    {
+        "comp_display_name": "Resveratrol",
+        "comp_abbr": "RSVTL",
+        "control_name": "DMSO",
+        "strain_name": "JU1348",
+        "pub": "Lucanic M, et al. (2017)",
+        "doi": "10.1038/ncomms14256",
+        "pubchem_id": 445154
+    },
+    {
+        "comp_display_name": "Resveratrol",
+        "comp_abbr": "RSVTL",
+        "control_name": "DMSO",
+        "strain_name": "JU775",
+        "pub": "Lucanic M, et al. (2017)",
+        "doi": "10.1038/ncomms14256",
+        "pubchem_id": 445154
+    },
+    {
+        "comp_display_name": "Resveratrol",
+        "comp_abbr": "RSVTL",
+        "control_name": "DMSO",
+        "strain_name": "MY16",
+        "pub": "Lucanic M, et al. (2017)",
+        "doi": "10.1038/ncomms14256",
+        "pubchem_id": 445154
+    },
+    {
+        "comp_display_name": "Resveratrol",
+        "comp_abbr": "RSVTL",
+        "control_name": "DMSO",
+        "strain_name": "N2",
+        "pub": "Lucanic M, et al. (2017)",
+        "doi": "10.1038/ncomms14256",
+        "pubchem_id": 445154
+    },
+    {
+        "comp_display_name": "Thioflavin T",
+        "comp_abbr": "THIOT",
+        "control_name": "H2O",
+        "strain_name": "AF16",
+        "pub": "Lucanic M, et al. (2017)",
+        "doi": "10.1038/ncomms14256",
+        "pubchem_id": 16953
+    },
+    {
+        "comp_display_name": "Thioflavin T",
+        "comp_abbr": "THIOT",
+        "control_name": "H2O",
+        "strain_name": "HK104",
+        "pub": "Lucanic M, et al. (2017)",
+        "doi": "10.1038/ncomms14256",
+        "pubchem_id": 16953
+    },
+    {
+        "comp_display_name": "Thioflavin T",
+        "comp_abbr": "THIOT",
+        "control_name": "H2O",
+        "strain_name": "JU1348",
+        "pub": "Lucanic M, et al. (2017)",
+        "doi": "10.1038/ncomms14256",
+        "pubchem_id": 16953
+    },
+    {
+        "comp_display_name": "Thioflavin T",
+        "comp_abbr": "THIOT",
+        "control_name": "H2O",
+        "strain_name": "JU775",
+        "pub": "Lucanic M, et al. (2017)",
+        "doi": "10.1038/ncomms14256",
+        "pubchem_id": 16953
+    },
+    {
+        "comp_display_name": "Thioflavin T",
+        "comp_abbr": "THIOT",
+        "control_name": "H2O",
+        "strain_name": "MY16",
+        "pub": "Lucanic M, et al. (2017)",
+        "doi": "10.1038/ncomms14256",
+        "pubchem_id": 16953
+    },
+    {
+        "comp_display_name": "Thioflavin T",
+        "comp_abbr": "THIOT",
+        "control_name": "H2O",
+        "strain_name": "N2",
+        "pub": "Lucanic M, et al. (2017)",
+        "doi": "10.1038/ncomms14256",
+        "pubchem_id": 16953
+    },
+    {
+        "comp_display_name": "Valproic acid",
+        "comp_abbr": "VALPRO",
+        "control_name": "H2O",
+        "strain_name": "AF16",
+        "pub": "Lucanic M, et al. (2017)",
+        "doi": "10.1038/ncomms14256",
+        "pubchem_id": 3121
+    },
+    {
+        "comp_display_name": "Valproic acid",
+        "comp_abbr": "VALPRO",
+        "control_name": "H2O",
+        "strain_name": "HK104",
+        "pub": "Lucanic M, et al. (2017)",
+        "doi": "10.1038/ncomms14256",
+        "pubchem_id": 3121
+    },
+    {
+        "comp_display_name": "Valproic acid",
+        "comp_abbr": "VALPRO",
+        "control_name": "H2O",
+        "strain_name": "JU1348",
+        "pub": "Lucanic M, et al. (2017)",
+        "doi": "10.1038/ncomms14256",
+        "pubchem_id": 3121
+    },
+    {
+        "comp_display_name": "Valproic acid",
+        "comp_abbr": "VALPRO",
+        "control_name": "H2O",
+        "strain_name": "JU775",
+        "pub": "Lucanic M, et al. (2017)",
+        "doi": "10.1038/ncomms14256",
+        "pubchem_id": 3121
+    },
+    {
+        "comp_display_name": "Valproic acid",
+        "comp_abbr": "VALPRO",
+        "control_name": "H2O",
+        "strain_name": "MY16",
+        "pub": "Lucanic M, et al. (2017)",
+        "doi": "10.1038/ncomms14256",
+        "pubchem_id": 3121
+    },
+    {
+        "comp_display_name": "Valproic acid",
+        "comp_abbr": "VALPRO",
+        "control_name": "H2O",
+        "strain_name": "N2",
+        "pub": "Lucanic M, et al. (2017)",
+        "doi": "10.1038/ncomms14256",
+        "pubchem_id": 3121
+    },
+    {
+        "comp_display_name": "Bromocriptine",
+        "comp_abbr": "BROMO",
+        "control_name": "DMSO",
+        "strain_name": "AF16",
+        "pub": "Onken M, et al. (2021)",
+        "doi": "10.1111/acel.13488",
+        "pubchem_id": 31101
+    },
+    {
+        "comp_display_name": "Bromocriptine",
+        "comp_abbr": "BROMO",
+        "control_name": "DMSO",
+        "strain_name": "JU1630",
+        "pub": "Onken M, et al. (2021)",
+        "doi": "10.1111/acel.13488",
+        "pubchem_id": 31101
+    },
+    {
+        "comp_display_name": "Bromocriptine",
+        "comp_abbr": "BROMO",
+        "control_name": "DMSO",
+        "strain_name": "N2_PD1073",
+        "pub": "Onken M, et al. (2021)",
+        "doi": "10.1111/acel.13488",
+        "pubchem_id": 31101
+    },
+    {
+        "comp_display_name": "Dapagliflozin",
+        "comp_abbr": "DAPAG",
+        "control_name": "DMSO",
+        "strain_name": "AF16",
+        "pub": "Onken M, et al. (2021)",
+        "doi": "10.1111/acel.13488",
+        "pubchem_id": 9887712
+    },
+    {
+        "comp_display_name": "Dapagliflozin",
+        "comp_abbr": "DAPAG",
+        "control_name": "DMSO",
+        "strain_name": "AQ351",
+        "pub": "Onken M, et al. (2021)",
+        "doi": "10.1111/acel.13488",
+        "pubchem_id": 9887712
+    },
+    {
+        "comp_display_name": "Dapagliflozin",
+        "comp_abbr": "DAPAG",
+        "control_name": "DMSO",
+        "strain_name": "JU1630",
+        "pub": "Onken M, et al. (2021)",
+        "doi": "10.1111/acel.13488",
+        "pubchem_id": 9887712
+    },
+    {
+        "comp_display_name": "Dapagliflozin",
+        "comp_abbr": "DAPAG",
+        "control_name": "DMSO",
+        "strain_name": "N2_PD1073",
+        "pub": "Onken M, et al. (2021)",
+        "doi": "10.1111/acel.13488",
+        "pubchem_id": 9887712
+    },
+    {
+        "comp_display_name": "Dapagliflozin",
+        "comp_abbr": "DAPAG",
+        "control_name": "DMSO",
+        "strain_name": "NL130",
+        "pub": "Onken M, et al. (2021)",
+        "doi": "10.1111/acel.13488",
+        "pubchem_id": 9887712
+    },
+    {
+        "comp_display_name": "Dapagliflozin",
+        "comp_abbr": "DAPAG",
+        "control_name": "DMSO",
+        "strain_name": "NL152",
+        "pub": "Onken M, et al. (2021)",
+        "doi": "10.1111/acel.13488",
+        "pubchem_id": 9887712
+    },
+    {
+        "comp_display_name": "Glipizide",
+        "comp_abbr": "GLIPZ",
+        "control_name": "DMSO",
+        "strain_name": "AF16",
+        "pub": "Onken M, et al. (2021)",
+        "doi": "10.1111/acel.13488",
+        "pubchem_id": 3478
+    },
+    {
+        "comp_display_name": "Glipizide",
+        "comp_abbr": "GLIPZ",
+        "control_name": "DMSO",
+        "strain_name": "AQ351",
+        "pub": "Onken M, et al. (2021)",
+        "doi": "10.1111/acel.13488",
+        "pubchem_id": 3478
+    },
+    {
+        "comp_display_name": "Glipizide",
+        "comp_abbr": "GLIPZ",
+        "control_name": "DMSO",
+        "strain_name": "JU1630",
+        "pub": "Onken M, et al. (2021)",
+        "doi": "10.1111/acel.13488",
+        "pubchem_id": 3478
+    },
+    {
+        "comp_display_name": "Glipizide",
+        "comp_abbr": "GLIPZ",
+        "control_name": "DMSO",
+        "strain_name": "N2_PD1073",
+        "pub": "Onken M, et al. (2021)",
+        "doi": "10.1111/acel.13488",
+        "pubchem_id": 3478
+    },
+    {
+        "comp_display_name": "Glipizide",
+        "comp_abbr": "GLIPZ",
+        "control_name": "DMSO",
+        "strain_name": "NL130",
+        "pub": "Onken M, et al. (2021)",
+        "doi": "10.1111/acel.13488",
+        "pubchem_id": 3478
+    },
+    {
+        "comp_display_name": "Glipizide",
+        "comp_abbr": "GLIPZ",
+        "control_name": "DMSO",
+        "strain_name": "NL152",
+        "pub": "Onken M, et al. (2021)",
+        "doi": "10.1111/acel.13488",
+        "pubchem_id": 3478
+    },
+    {
+        "comp_display_name": "Metformin",
+        "comp_abbr": "METFO",
+        "control_name": "H2O",
+        "strain_name": "AF16",
+        "pub": "Onken M, et al. (2021)",
+        "doi": "10.1111/acel.13488",
+        "pubchem_id": 4091
+    },
+    {
+        "comp_display_name": "Metformin",
+        "comp_abbr": "METFO",
+        "control_name": "H2O",
+        "strain_name": "AQ351",
+        "pub": "Onken M, et al. (2021)",
+        "doi": "10.1111/acel.13488",
+        "pubchem_id": 4091
+    },
+    {
+        "comp_display_name": "Metformin",
+        "comp_abbr": "METFO",
+        "control_name": "H2O",
+        "strain_name": "ED3092",
+        "pub": "Onken M, et al. (2021)",
+        "doi": "10.1111/acel.13488",
+        "pubchem_id": 4091
+    },
+    {
+        "comp_display_name": "Metformin",
+        "comp_abbr": "METFO",
+        "control_name": "H2O",
+        "strain_name": "HK104",
+        "pub": "Onken M, et al. (2021)",
+        "doi": "10.1111/acel.13488",
+        "pubchem_id": 4091
+    },
+    {
+        "comp_display_name": "Metformin",
+        "comp_abbr": "METFO",
+        "control_name": "H2O",
+        "strain_name": "JU1373",
+        "pub": "Onken M, et al. (2021)",
+        "doi": "10.1111/acel.13488",
+        "pubchem_id": 4091
+    },
+    {
+        "comp_display_name": "Metformin",
+        "comp_abbr": "METFO",
+        "control_name": "H2O",
+        "strain_name": "JU1630",
+        "pub": "Onken M, et al. (2021)",
+        "doi": "10.1111/acel.13488",
+        "pubchem_id": 4091
+    },
+    {
+        "comp_display_name": "Metformin",
+        "comp_abbr": "METFO",
+        "control_name": "H2O",
+        "strain_name": "JU775",
+        "pub": "Onken M, et al. (2021)",
+        "doi": "10.1111/acel.13488",
+        "pubchem_id": 4091
+    },
+    {
+        "comp_display_name": "Metformin",
+        "comp_abbr": "METFO",
+        "control_name": "H2O",
+        "strain_name": "MY16",
+        "pub": "Onken M, et al. (2021)",
+        "doi": "10.1111/acel.13488",
+        "pubchem_id": 4091
+    },
+    {
+        "comp_display_name": "Metformin",
+        "comp_abbr": "METFO",
+        "control_name": "H2O",
+        "strain_name": "N2_PD1073",
+        "pub": "Onken M, et al. (2021)",
+        "doi": "10.1111/acel.13488",
+        "pubchem_id": 4091
+    },
+    {
+        "comp_display_name": "Metformin",
+        "comp_abbr": "METFO",
+        "control_name": "H2O",
+        "strain_name": "NL130",
+        "pub": "Onken M, et al. (2021)",
+        "doi": "10.1111/acel.13488",
+        "pubchem_id": 4091
+    },
+    {
+        "comp_display_name": "Metformin",
+        "comp_abbr": "METFO",
+        "control_name": "H2O",
+        "strain_name": "NL152",
+        "pub": "Onken M, et al. (2021)",
+        "doi": "10.1111/acel.13488",
+        "pubchem_id": 4091
+    },
+    {
+        "comp_display_name": "Metformin",
+        "comp_abbr": "METFO",
+        "control_name": "H2O",
+        "strain_name": "QG834",
+        "pub": "Onken M, et al. (2021)",
+        "doi": "10.1111/acel.13488",
+        "pubchem_id": 4091
+    },
+    {
+        "comp_display_name": "Nateglinide",
+        "comp_abbr": "NATE",
+        "control_name": "DMSO",
+        "strain_name": "AF16",
+        "pub": "Onken M, et al. (2021)",
+        "doi": "10.1111/acel.13488",
+        "pubchem_id": 5311309
+    },
+    {
+        "comp_display_name": "Nateglinide",
+        "comp_abbr": "NATE",
+        "control_name": "DMSO",
+        "strain_name": "AQ351",
+        "pub": "Onken M, et al. (2021)",
+        "doi": "10.1111/acel.13488",
+        "pubchem_id": 5311309
+    },
+    {
+        "comp_display_name": "Nateglinide",
+        "comp_abbr": "NATE",
+        "control_name": "DMSO",
+        "strain_name": "JU1630",
+        "pub": "Onken M, et al. (2021)",
+        "doi": "10.1111/acel.13488",
+        "pubchem_id": 5311309
+    },
+    {
+        "comp_display_name": "Nateglinide",
+        "comp_abbr": "NATE",
+        "control_name": "DMSO",
+        "strain_name": "N2_PD1073",
+        "pub": "Onken M, et al. (2021)",
+        "doi": "10.1111/acel.13488",
+        "pubchem_id": 5311309
+    },
+    {
+        "comp_display_name": "Nateglinide",
+        "comp_abbr": "NATE",
+        "control_name": "DMSO",
+        "strain_name": "NL130",
+        "pub": "Onken M, et al. (2021)",
+        "doi": "10.1111/acel.13488",
+        "pubchem_id": 5311309
+    },
+    {
+        "comp_display_name": "Nateglinide",
+        "comp_abbr": "NATE",
+        "control_name": "DMSO",
+        "strain_name": "NL152",
+        "pub": "Onken M, et al. (2021)",
+        "doi": "10.1111/acel.13488",
+        "pubchem_id": 5311309
+    },
+    {
+        "comp_display_name": "Pioglitazone",
+        "comp_abbr": "PIOG",
+        "control_name": "DMSO",
+        "strain_name": "AF16",
+        "pub": "Onken M, et al. (2021)",
+        "doi": "10.1111/acel.13488",
+        "pubchem_id": 4829
+    },
+    {
+        "comp_display_name": "Pioglitazone",
+        "comp_abbr": "PIOG",
+        "control_name": "DMSO",
+        "strain_name": "AQ351",
+        "pub": "Onken M, et al. (2021)",
+        "doi": "10.1111/acel.13488",
+        "pubchem_id": 4829
+    },
+    {
+        "comp_display_name": "Pioglitazone",
+        "comp_abbr": "PIOG",
+        "control_name": "DMSO",
+        "strain_name": "JU1630",
+        "pub": "Onken M, et al. (2021)",
+        "doi": "10.1111/acel.13488",
+        "pubchem_id": 4829
+    },
+    {
+        "comp_display_name": "Pioglitazone",
+        "comp_abbr": "PIOG",
+        "control_name": "DMSO",
+        "strain_name": "N2_PD1073",
+        "pub": "Onken M, et al. (2021)",
+        "doi": "10.1111/acel.13488",
+        "pubchem_id": 4829
+    },
+    {
+        "comp_display_name": "Pioglitazone",
+        "comp_abbr": "PIOG",
+        "control_name": "DMSO",
+        "strain_name": "NL130",
+        "pub": "Onken M, et al. (2021)",
+        "doi": "10.1111/acel.13488",
+        "pubchem_id": 4829
+    },
+    {
+        "comp_display_name": "Pioglitazone",
+        "comp_abbr": "PIOG",
+        "control_name": "DMSO",
+        "strain_name": "NL152",
+        "pub": "Onken M, et al. (2021)",
+        "doi": "10.1111/acel.13488",
+        "pubchem_id": 4829
+    },
+    {
+        "comp_display_name": "Sitagliptin",
+        "comp_abbr": "SITAG",
+        "control_name": "DMSO",
+        "strain_name": "AF16",
+        "pub": "Onken M, et al. (2021)",
+        "doi": "10.1111/acel.13488",
+        "pubchem_id": 4369359
+    },
+    {
+        "comp_display_name": "Sitagliptin",
+        "comp_abbr": "SITAG",
+        "control_name": "DMSO",
+        "strain_name": "AQ351",
+        "pub": "Onken M, et al. (2021)",
+        "doi": "10.1111/acel.13488",
+        "pubchem_id": 4369359
+    },
+    {
+        "comp_display_name": "Sitagliptin",
+        "comp_abbr": "SITAG",
+        "control_name": "DMSO",
+        "strain_name": "JU1630",
+        "pub": "Onken M, et al. (2021)",
+        "doi": "10.1111/acel.13488",
+        "pubchem_id": 4369359
+    },
+    {
+        "comp_display_name": "Sitagliptin",
+        "comp_abbr": "SITAG",
+        "control_name": "DMSO",
+        "strain_name": "N2_PD1073",
+        "pub": "Onken M, et al. (2021)",
+        "doi": "10.1111/acel.13488",
+        "pubchem_id": 4369359
+    },
+    {
+        "comp_display_name": "Sitagliptin",
+        "comp_abbr": "SITAG",
+        "control_name": "DMSO",
+        "strain_name": "NL130",
+        "pub": "Onken M, et al. (2021)",
+        "doi": "10.1111/acel.13488",
+        "pubchem_id": 4369359
+    },
+    {
+        "comp_display_name": "Sitagliptin",
+        "comp_abbr": "SITAG",
+        "control_name": "DMSO",
+        "strain_name": "NL152",
+        "pub": "Onken M, et al. (2021)",
+        "doi": "10.1111/acel.13488",
+        "pubchem_id": 4369359
+    }
+]

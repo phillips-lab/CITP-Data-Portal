@@ -1,0 +1,110 @@
+{% extends "base.html" %} 
+{% block content %} 
+<script type="text/javascript">
+        $(document).ready(function() {
+            var table = $("#data").DataTable({
+                searching: true,
+                paging: false,
+                ordering: false,
+                info: false,
+                ajax: {
+                    url: "/lifespan/pub/data",
+                    dataSrc: ""
+                },
+                columns: [{
+                        data: "manuscript_id"
+                    },
+                    {
+                        data: "author"
+                    },
+                    {
+                        data: "doi",
+                        render: function(data, type, row, meta) {
+                            if (type === "display") {
+                                data = '<a href="https://www.doi.org/' + data + '">' + row.journal + ' <i class="fa-solid fa-arrow-up-right-from-square"></i></a>';
+                            }
+                            return data;
+                        },
+                    },
+                    {
+                        data: "year"
+                    },
+                    {
+                        data: "dataset_name",
+                        render: function(data, type, row, meta) {
+                            if (type === "display") {
+                                data = data + ' <a href="download_link_for_' + data;
+                            }
+                            return data;
+                        },
+                    },
+                    {
+                        data: "dataset_name",
+                        render: function(data, type, row, meta) {
+                            if (type === "display") {
+                                var csvFileName = 'citp_dataset_' + data.toUpperCase().replace(/\s+/g, '_') + '.csv';
+                                var excelFileName = 'citp_dataset_' + data.toUpperCase().replace(/\s+/g, '_') + '.xlsx';
+
+                                var csvDownloadLink = '{{ url_for("static", filename="downloads/by_dataset/") }}' + csvFileName;
+                                var excelDownloadLink = '{{ url_for("static", filename="downloads/by_dataset/") }}' + excelFileName;
+
+                                var csvButton = '<button type="button" class="btn btn-primary btn-sm" onclick="window.location.href=\'' + csvDownloadLink + '\'">CSV</button>';
+                                var excelButton = '<button type="button" class="btn btn-primary btn-sm" onclick="window.location.href=\'' + excelDownloadLink + '\'">Excel</button>';
+
+                                data = csvButton + ' ' + excelButton;
+                            }
+                            return data;
+                        }
+                    }
+                ],
+                columnDefs: [{
+                        targets: [0],
+                        visible: false,
+                    },
+                    {
+                        targets: [3, 5],
+                        className: 'dt-center',
+                    },
+                ],
+            });
+
+            table
+                .column(0)
+                .search("{{ pub_id }}", true, false, true)
+                .draw();
+
+            table.on("select deselect", function() {
+                var selectedRows = table.rows({
+                    selected: true
+                }).count();
+                table.button(2).enable(selectedRows > 0);
+                table.button(3).enable(selectedRows > 0);
+                table.button(4).enable(selectedRows > 0);
+            });
+        });
+</script>
+<style>
+   div.dataTables_wrapper {
+   width: 1100px; 
+   margin: 0 auto; 
+   }
+</style>
+<div id="main">
+   <div class="table-responsive">
+      <div class="dataTables_wrapper">
+         <table id="data" class="display compact nowrap" width="100%">
+            <thead>
+               <tr>
+                  <th>Manuscript ID</th>
+                  <th>Author</th>
+                  <th>Publication</th>
+                  <th>Year</th>
+                  <th>Dataset</th>
+                  <th>Download Data</th>
+               </tr>
+            </thead>
+         </table>
+      </div>
+   </div>
+</div>
+{% endblock %}

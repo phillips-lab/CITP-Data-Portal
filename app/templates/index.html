@@ -1,0 +1,114 @@
+{% extends "base.html" %} 
+{% block content %}
+<style>
+   p {
+   font-size: larger;
+   padding-right: 4em;
+   padding-left: 4em;
+   }
+   .visible {
+   display: block;
+   }
+   .hidden {
+   display: none;
+   }
+   #footer {
+   width: 100%;
+   background-color: #222222;
+   color: #dddddd;
+   padding: 20px;
+   }
+</style>
+<body>
+   <div class="container-fluid">
+      <div class="col-md-1"></div>
+      <div class="col-md-4" style="text-align:center;"><a href="https://citp.squarespace.com/"><img src="{{ url_for('static', filename='citp_logo.png') }}" alt="CITP logo"></a></div>
+      <div class="col-md-6">
+         <p>The discovery of conserved genetic pathways whose manipulation via genetics and diet can lead to tremendous increases in lifespan, stress resistance, and prolonged health in a variety of different animals raises the prospect that pharmacological agents can be identified to achieve the same outcomes.</p>
+         <p id="d1">The <a href="https://citp.squarespace.com/"><i>Caenorhabditis</i> Intervention Testing Program (CITP)</a> <button id="b1" class="btn btn-primary btn-xs">Read more</button></p>
+         <p id="d2" class="hidden">The <a href="https://citp.squarespace.com/"><i>Caenorhabditis</i> Intervention Testing Program (CITP)</a> comprises a consortium of labs (based at the Buck Institute for Research on Aging, Rutgers University, and the University of Oregon) to systematically test a broad array of bioactive compounds for their effects on longevity and other biomarkers of aging across a broad set of nematode strains and species. Our collaborative research team has developed innovative approaches that allow a variety of high-throughput, high-precision assays of lifespan and healthspan. The data portal provides access to manual and automated lifespan data published by the CITP. <button id="b2" class="btn btn-primary btn-xs">Read less</button></p>
+      </div>
+      <div class="col-md-1"></div>
+   </div>
+   <h3>Browse data downloads by...</h3>
+   <div class="container-fluid">
+      <div class="row">
+         <div class="col-md-2"></div>
+         <div class="col-md-2" style="text-align:center;">
+            <div>
+               <a href="/lifespan/pub">
+                  <svg xmlns="http://www.w3.org/2000/svg" height="{{ icon_size }}" width="{{ icon_size }}" viewBox="0 0 448 512">
+                     <!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2023 Fonticons, Inc.-->
+                     <path d="M448 80v48c0 44.2-100.3 80-224 80S0 172.2 0 128V80C0 35.8 100.3 0 224 0S448 35.8 448 80zM393.2 214.7c20.8-7.4 39.9-16.9 54.8-28.6V288c0 44.2-100.3 80-224 80S0 332.2 0 288V186.1c14.9 11.8 34 21.2 54.8 28.6C99.7 230.7 159.5 240 224 240s124.3-9.3 169.2-25.3zM0 346.1c14.9 11.8 34 21.2 54.8 28.6C99.7 390.7 159.5 400 224 400s124.3-9.3 169.2-25.3c20.8-7.4 39.9-16.9 54.8-28.6V432c0 44.2-100.3 80-224 80S0 476.2 0 432V346.1z"/>
+                  </svg>
+               </a>
+            </div>
+            <div style="padding:8px;"><a href="/lifespan/pub" style="font-size:large">Published Dataset</a></div>
+         </div>
+         <div class="col-md-2" style="text-align:center;">
+            <div>
+               <a href="/lifespan/intervention">
+                  <svg xmlns="http://www.w3.org/2000/svg" height="{{ icon_size }}" width="{{ icon_size }}" viewBox="0 0 448 512">
+                     <!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2023 Fonticons, Inc.-->
+                     <path d="M288 0H160 128C110.3 0 96 14.3 96 32s14.3 32 32 32V196.8c0 11.8-3.3 23.5-9.5 33.5L10.3 406.2C3.6 417.2 0 429.7 0 442.6C0 480.9 31.1 512 69.4 512H378.6c38.3 0 69.4-31.1 69.4-69.4c0-12.8-3.6-25.4-10.3-36.4L329.5 230.4c-6.2-10.1-9.5-21.7-9.5-33.5V64c17.7 0 32-14.3 32-32s-14.3-32-32-32H288zM192 196.8V64h64V196.8c0 23.7 6.6 46.9 19 67.1L309.5 320h-171L173 263.9c12.4-20.2 19-43.4 19-67.1z"/>
+                  </svg>
+               </a>
+            </div>
+            <div style="padding:8px;"><a href="/lifespan/intervention" style="font-size:large">Intervention</a></div>
+         </div>
+         <div class="col-md-2" style="text-align:center;">
+            <div>
+               <a href="/lifespan/compound">
+                  <svg xmlns="http://www.w3.org/2000/svg" height="{{ icon_size }}" width="{{ icon_size }}" viewBox="0 0 512 512">
+                     <!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2023 Fonticons, Inc.-->
+                     <path d="M256 398.8c-11.8 5.1-23.4 9.7-34.9 13.5c16.7 33.8 31 35.7 34.9 35.7s18.1-1.9 34.9-35.7c-11.4-3.9-23.1-8.4-34.9-13.5zM446 256c33 45.2 44.3 90.9 23.6 128c-20.2 36.3-62.5 49.3-115.2 43.2c-22 52.1-55.6 84.8-98.4 84.8s-76.4-32.7-98.4-84.8c-52.7 6.1-95-6.8-115.2-43.2C21.7 346.9 33 301.2 66 256c-33-45.2-44.3-90.9-23.6-128c20.2-36.3 62.5-49.3 115.2-43.2C179.6 32.7 213.2 0 256 0s76.4 32.7 98.4 84.8c52.7-6.1 95 6.8 115.2 43.2c20.7 37.1 9.4 82.8-23.6 128zm-65.8 67.4c-1.7 14.2-3.9 28-6.7 41.2c31.8 1.4 38.6-8.7 40.2-11.7c2.3-4.2 7-17.9-11.9-48.1c-6.8 6.3-14 12.5-21.6 18.6zm-6.7-175.9c2.8 13.1 5 26.9 6.7 41.2c7.6 6.1 14.8 12.3 21.6 18.6c18.9-30.2 14.2-44 11.9-48.1c-1.6-2.9-8.4-13-40.2-11.7zM290.9 99.7C274.1 65.9 259.9 64 256 64s-18.1 1.9-34.9 35.7c11.4 3.9 23.1 8.4 34.9 13.5c11.8-5.1 23.4-9.7 34.9-13.5zm-159 88.9c1.7-14.3 3.9-28 6.7-41.2c-31.8-1.4-38.6 8.7-40.2 11.7c-2.3 4.2-7 17.9 11.9 48.1c6.8-6.3 14-12.5 21.6-18.6zM110.2 304.8C91.4 335 96 348.7 98.3 352.9c1.6 2.9 8.4 13 40.2 11.7c-2.8-13.1-5-26.9-6.7-41.2c-7.6-6.1-14.8-12.3-21.6-18.6zM336 256a80 80 0 1 0 -160 0 80 80 0 1 0 160 0zm-80-32a32 32 0 1 1 0 64 32 32 0 1 1 0-64z"/>
+                  </svg>
+               </a>
+            </div>
+            <div style="padding:8px;"><a href="/lifespan/compound" style="font-size:large">Compound</a></div>
+         </div>
+         <div class="col-md-2" style="text-align:center;">
+            <div>
+               <a href="/lifespan/strain">
+                  <svg xmlns="http://www.w3.org/2000/svg" height="{{ icon_size }}" width="{{ icon_size }}" viewBox="0 0 512 512">
+                     <!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2023 Fonticons, Inc.-->
+                     <path d="M256 96c0-53 43-96 96-96h38.4C439.9 0 480 40.1 480 89.6V176v16V376c0 75.1-60.9 136-136 136s-136-60.9-136-136V296c0-22.1-17.9-40-40-40s-40 17.9-40 40V464c0 26.5-21.5 48-48 48s-48-21.5-48-48V296c0-75.1 60.9-136 136-136s136 60.9 136 136v80c0 22.1 17.9 40 40 40s40-17.9 40-40V192H352c-53 0-96-43-96-96zm144-8a24 24 0 1 0 -48 0 24 24 0 1 0 48 0z"/>
+                  </svg>
+               </a>
+            </div>
+            <div style="padding:8px;"><a href="/lifespan/strain" style="font-size:large">Worm Strain</a></div>
+         </div>
+         <div class="col-md-2"></div>
+      </div>
+   </div>
+   <h3>Publications:</h3>
+   <p>Lucanic, M., et al. (2017). Impact of genetic background and experimental reproducibility on identifying chemical compounds with robust longevity effects. <i>Nature Communications</i> 8, 14256. (DOI: <a href="https://www.doi.org/10.1038/ncomms14256">10.1038/ncomms14256</a>) <a href="/lifespan/pub/1000"><button class="btn btn-primary btn-xs">See datasets <i class="fas fa-arrow-right"></i></button></a></p>
+   <p>Banse, S.A., et al. (2019). Automated lifespan determination across Caenorhabditis strains and species reveals assay-specific effects of chemical interventions. <i>GeroScience</i> 41:945–960. (DOI: <a href="https://www.doi.org/10.1007/s11357-019-00108-9">10.1007/s11357-019-00108-9</a>) <a href="/lifespan/pub/3000"><button class="btn btn-primary btn-xs">See datasets <i class="fas fa-arrow-right"></i></button></a></p>
+   <p>Onken, B., et al. (2021). Metformin treatment of diverse Caenorhabditis species reveals the importance of genetic background in longevity and healthspan extension outcomes. <i>Aging Cell</i> e13488. (DOI: <a href="https://www.doi.org/10.1111/acel.13488">10.1111/acel.13488</a>) <a href="/lifespan/pub/2000"><button class="btn btn-primary btn-xs">See datasets <i class="fas fa-arrow-right"></i></button></a></p>
+   <h3>Micropubs:</h3>
+   <p>Osman et al, Caenorhabditis Intervention Testing Program: the herbicide diuron does not robustly extend lifespan in nematodes. (DOI: <a href="https://www.micropublication.org/journals/biology/micropub-biology-000448">10.1111/acel.13488</a>) <a href="/lifespan/pub/4000"><button class="btn btn-primary btn-xs">See datasets <i class="fas fa-arrow-right"></i></button></a></p>
+   <p>Morshead et al, Caenorhabditis Intervention Testing Program: the farnesoid X receptor agonist obeticholic acid does not robustly extend lifespan in nematodes. microPublication Biology. (DOI: <a href="https://www.micropublication.org/journals/biology/micropub-biology-000257">10.1111/acel.13488</a>) <a href="/lifespan/pub/2000"><button class="btn btn-primary btn-xs">See datasets <i class="fas fa-arrow-right"></i></button></a></p>
+   <p>Coleman-Hulbert et al, Caenorhabditis Intervention Testing Program: the creatine analog β-guanidinopropionic acid does not extend lifespan in nematodes. (DOI: <a href="https://www.micropublication.org/journals/biology/micropub-biology-000207">10.1111/acel.13488</a>) <a href="/lifespan/pub/2000"><button class="btn btn-primary btn-xs">See datasets <i class="fas fa-arrow-right"></i></button></a></p>
+   <p>Coleman-Hulbert et al, Caenorhabditis Intervention Testing Program: the tyrosine kinase inhibitor imatinib mesylate does not extend lifespan in nematodes. (DOI: <a href="https://www.micropublication.org/journals/biology/micropub-biology-000131">10.1111/acel.13488</a>) <a href="/lifespan/pub/2000"><button class="btn btn-primary btn-xs">See datasets <i class="fas fa-arrow-right"></i></button></a></p>
+   <div id="footer">
+      <div>Copyright</div>
+      <div>Funding</div>
+      <div>Credits</div>
+   <div>
+</body>
+<script>
+   function show() {
+      document.getElementById('d2').className='visible'; 
+      document.getElementById('d1').className='hidden'; 
+   }
+   function hide() {
+      document.getElementById('d2').className='hidden'; 
+      document.getElementById('d1').className='visible'; 
+   }
+   
+   var p1 = document.getElementById("p1");
+   b1.onclick = show;
+   var p2 = document.getElementById("p2");
+   b2.onclick = hide;
+</script>
+{% endblock %}

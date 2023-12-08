@@ -1,0 +1,7 @@
+__pycache__
+.DS_Store
+.Rhistory
+.vscode
+citp-data-portal-venv
+citp-data-portal.db
+notes.md
