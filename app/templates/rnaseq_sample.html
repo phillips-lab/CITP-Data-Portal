@@ -1,0 +1,76 @@
+{% extends "base.html" %} {% block content %}
+<script type="text/javascript">
+    $(document).ready(function () {
+        var table = $("#data").DataTable({
+            searching: true,
+            paging: false,
+            ordering: false,
+            info: false,
+            ajax: {
+                url: "/lifespan/rnaseq/sample/data",
+                dataSrc: ""
+            },
+            columns: [
+                { data: "sample_name" },
+                { data: "strain_name" },
+                { data: "adult_age" },
+                { data: "treatment" },
+                { data: "replicate_num" },
+                { data: "lab_name" },
+                
+            ],
+            columnDefs: [
+                {
+                    targets: [],
+                    visible: false,
+                }
+            ],
+            // Customizing table format
+           dom: "Bfrtip",
+           buttons: [
+               "copy",
+               "csv",
+               "excel",
+               "pdf",
+               "print"
+           ],
+           lengthMenu: [[10, 25, 50, -1], [10, 25, 50, "All"]],
+           scrollX: true,
+           scrollCollapse: true,
+           autoWidth: true,
+        });
+        table.on("select deselect", function () {
+            var selectedRows = table.rows({ selected: true }).count();
+            table.button(2).enable(selectedRows > 0);
+            table.button(3).enable(selectedRows > 0);
+            table.button(4).enable(selectedRows > 0);
+        });
+    });
+</script>
+<style>
+    .custom-search-bar {
+    text-align: left;
+    margin-left: 10px; /* Adjust the value as needed */
+    margin-top: 10px; /* Adjust the value as needed */
+    }
+    /* Add this part to incorporate the scrolling */
+   div.dataTables_wrapper {
+   width: 900px; /* Set the desired width for the table */
+   margin: 0 auto; /* Center the table on the page */
+   }
+</style>
+<div id="main">
+    <table id="data" class="display compact nowrap" width="100%" style="font-family: 'Arial Narrow', Arial, sans-serif;">
+        <thead>
+            <tr>
+                <th>Sample Name</th>
+                <th>Strain</th>
+                <th>Adult Age</th>
+                <th>Treatment</th>
+                <th>Replicate Number</th>
+                <th>Lab Name</th>
+            </tr>
+        </thead>
+    </table>
+</div>
+{% endblock %}

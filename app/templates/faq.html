@@ -1,0 +1,91 @@
+{% extends "base.html" %} 
+{% block content %} 
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+    <div class="container">
+        <h2>CITP FAQ Page</h2>
+        <div class="panel-group" id="accordion">
+          <!-- Question 1 -->
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <h4 class="panel-title">
+                <a data-toggle="collapse" data-parent="#accordion" href="#collapse1">What is the purpose of the NIA/NIH's Caenorhabditis Intervention Testing Program (CITP)?</a>
+              </h4>
+            </div>
+            <div id="collapse1" class="panel-collapse collapse in">
+              <div class="panel-body">The CITP tests compounds for their ability to extend lifespan and/or healthspans in Caenorhabditis worms.</div>
+            </div>
+          </div>
+      
+          <!-- Question 2 -->
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <h4 class="panel-title">
+                <a data-toggle="collapse" data-parent="#accordion" href="#collapse2">Why Caenorhabditis?</a>
+              </h4>
+            </div>
+            <div id="collapse2" class="panel-collapse collapse">
+              <div class="panel-body">Caenorhabditis species are excellent model organisms for the purpose of this study due to their short lifespans 
+              and genetic tractability. They are simple to prepare for experimentation because the worms self-fertilize.</div>
+            </div>
+          </div>
+      
+          <!-- Question 3 -->
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <h4 class="panel-title">
+                <a data-toggle="collapse" data-parent="#accordion" href="#collapse3">How are lifespan experiments conducted?</a>
+              </h4>
+            </div>
+            <div id="collapse3" class="panel-collapse collapse">
+              <div class="panel-body">Hermaphroditic Caenorhabditis strains are placed on agar plates treated with the compound of interest. These 
+              species of Caenorhabditis include C. elegans, C. briggsae, and C. tropicalis. Each worm is observed until death,
+              whether from natural causes or other means (bagging, extrusion, etc.).</div>
+            </div>
+          </div>
+          <!-- Question 4 -->
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <h4 class="panel-title">
+                <a data-toggle="collapse" data-parent="#accordion" href="#collapse4">Where are the experiments conducted?</a>
+              </h4>
+            </div>
+            <div id="collapse4" class="panel-collapse collapse">
+              <div class="panel-body">The experiments are conducted in research laboratories at three different institutions: the Buck Institute for 
+                Research on Aging, Rutgers University, and the University of Oregon.</div>
+            </div>
+          </div>
+          <!-- Question 5 -->
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <h4 class="panel-title">
+                <a data-toggle="collapse" data-parent="#accordion" href="#collapse5">If the agent shortens the lifespan or has negative effects, what will happen to the data?</a>
+              </h4>
+            </div>
+            <div id="collapse5" class="panel-collapse collapse">
+              <div class="panel-body">All of the CITP data is published, including data on agents that fail to increase lifespan and/or healthspan, or interventions that have deleterious effects.</div>
+            </div>
+          </div>
+          <!-- Question 6 -->
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <h4 class="panel-title">
+                <a data-toggle="collapse" data-parent="#accordion" href="#collapse6">What is CeleST data?</a>
+              </h4>
+            </div>
+            <div id="collapse6" class="panel-collapse collapse">
+              <div class="panel-body">C. elegans swim test software (CeleST) tracks the animals' swimming behaviors to report on dynamics of 
+                posture and speed. The tracking provides coordinates of the central body line to enter movement data.
+                These machines generate data on swimming locomotion to be analyzed to evaluate the behaviors elicited.</div>
+            </div>
+          </div>
+
+      </div>
+      
+{% endblock %}

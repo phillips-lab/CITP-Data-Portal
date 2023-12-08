@@ -1,96 +1,111 @@
 {% extends "base.html" %} {% block content %}
 <script type="text/javascript">
-        $(document).ready(function() {
-            var table = $("#data").DataTable({
-                searching: true,
-                paging: false,
-                ordering: false,
-                info: false,
-                scrollX: true,
-                scrollY: '70vh',
-                scrollCollapse: true,
-                autoWidth: true,
-                ajax: {
-                    url: "/lifespan/comp/data",
-                    dataSrc: ""
-                },
-                columns: [{
-                        data: "comp_display_name",
-                        render: function(data, type, row, meta) {
-                            if (type === "display") {
-                                var pubchemId = row.pubchem_id;
-                                data = '<a href="https://pubchem.ncbi.nlm.nih.gov/compound/' + pubchemId + '">' + data + ' <i class="fa-solid fa-arrow-up-right-from-square"></i></a>';
-                            }
-                            return data;
+    $(document).ready(function () {
+        var table = $("#data").DataTable({
+            searching: true,
+            paging: false,
+            ordering: false,
+            info: false,
+            scrollY: '70vh', 
+            scrollCollapse: true,
+            paging: false,
+            ajax: {
+                url: "/lifespan/comp/data",
+                dataSrc: ""
+            },
+            columns: [
+            {
+                    data: "comp_display_name",
+                    render: function (data, type, row, meta) {
+                        if (type === "display") {
+                            var pubchemId = row.pubchem_id;
+                            data = '<a href="https://pubchem.ncbi.nlm.nih.gov/compound/' + pubchemId + '">' + data + ' <i class="fa-solid fa-arrow-up-right-from-square"></i></a>';
                         }
-                    },
-                    {
-                        data: "comp_abbr"
-                    },
-                    {
-                        data: "comp_abbr",
-                        render: function(data, type, row, meta) {
-                            if (type === "display") {
-                                var csvFileName = 'citp_compound_' + data.toUpperCase().replace(/\s+/g, '_') + '.csv';
-                                var excelFileName = 'citp_compound_' + data.toUpperCase().replace(/\s+/g, '_') + '.xlsx';
-
-                                var csvDownloadLink = '{{ url_for("static", filename="downloads/by_comp/") }}' + csvFileName;
-                                var excelDownloadLink = '{{ url_for("static", filename="downloads/by_comp/") }}' + excelFileName;
-
-                                var csvButton = '<button type="button" class="btn btn-primary btn-sm" onclick="window.location.href=\'' + csvDownloadLink + '\'">CSV</button>';
-                                var excelButton = '<button type="button" class="btn btn-primary btn-sm" onclick="window.location.href=\'' + excelDownloadLink + '\'">Excel</button>';
-
-                                data = csvButton + ' ' + excelButton;
-                            }
-                            return data;
-                        }
-                    },
-                    {
-                        data: null,
-                        render: function(data, type, row, meta) {
-                            if (type === "display") {
-                                data = '<button type="button" class="btn btn-primary btn-sm" onclick="window.location.href=\'/lifespan/intervention/comp/' + row.comp_abbr + '\'"><i class="fas fa-arrow-right"></i></button>';
-                            }
-                            return data;
-                        },
+                        return data;
                     }
-                ],
-                columnDefs: [{
-                    targets: [2, 3],
-                    className: 'dt-center',
-                }],
-                dom: "Bfrtip",
-                buttons: [
-                    "print"
-                ]
-            });
+                },
+                { data: "comp_abbr" },
+                { data: "control_name" },
+                {
+                    data: "comp_abbr",
+                    render: function (data, type, row, meta) {
+                    if (type === "display") {
+                        var csvFileName = 'citp_comp_' + data.toUpperCase().replace(/\s+/g, '_') + '.csv';
+                        var excelFileName = 'citp_comp_' + data.toUpperCase().replace(/\s+/g, '_') + '.xlsx';
+            
+                        var csvDownloadLink = '{{ url_for("static", filename="data/data_comp/") }}' + csvFileName;
+                        var excelDownloadLink = '{{ url_for("static", filename="data/data_comp/") }}' + excelFileName;
 
-            table.on("select deselect", function() {
-                var selectedRows = table.rows({
-                    selected: true
-                }).count();
-                table.button(2).enable(selectedRows > 0);
-                table.button(3).enable(selectedRows > 0);
-                table.button(4).enable(selectedRows > 0);
-            });
+                        var csvButton = '<button type="button" class="btn btn-primary btn-sm" onclick="window.location.href=\'' + csvDownloadLink + '\'">CSV</button>';
+                        var excelButton = '<button type="button" class="btn btn-primary btn-sm" onclick="window.location.href=\'' + excelDownloadLink + '\'">Excel</button>';
+
+                        data = csvButton + ' ' + excelButton;
+                                            }
+                    return data;
+                    }
+                },
+                {
+                   data: null, 
+                   render: function (data, type, row, meta) {
+                       if (type === "display") {
+                        data = '<button type="button" class="btn btn-primary btn-sm" onclick="window.location.href=\'/lifespan/summary/comp/' + row.comp_display_name + '\'"><i class="fas fa-arrow-right"></i></button>';
+                       }
+                       return data;
+                   },
+               },
+            ],
+            columnDefs: [
+                {
+                    targets: [2],
+                    visible: false,
+                },
+                {
+                    targets: [3, 4], 
+                    className: 'dt-center',
+                }
+            ],
+           dom: "Bfrtip",
+           buttons: [
+               "print"
+           ],
+           lengthMenu: [[10, 25, 50, -1], [10, 25, 50, "All"]],
+           scrollX: true,
+           scrollCollapse: true,
+           autoWidth: true,
         });
+        table.on("select deselect", function () {
+            var selectedRows = table.rows({ selected: true }).count();
+            table.button(2).enable(selectedRows > 0);
+            table.button(3).enable(selectedRows > 0);
+            table.button(4).enable(selectedRows > 0);
+        });
+    });
 </script>
 <style>
+    .custom-search-bar {
+    text-align: left;
+    margin-left: 10px; 
+    margin-top: 10px; 
+    }
    div.dataTables_wrapper {
    width: 900px; 
    margin: 0 auto; 
    }
+   #data th.center-header {
+    text-align: center;
+    }
 </style>
 <div id="main">
-   <table id="data" class="display compact nowrap" width="100%">
-      <thead>
-         <tr>
-            <th>Compound Name</th>
-            <th>Abbreviation</th>
-            <th>Download Data</th>
-            <th>See Tested Strains</th>
-         </tr>
-      </thead>
-   </table>
+    <table id="data" class="display compact nowrap" width="100%" style="font-family: 'Arial Narrow', Arial, sans-serif;">
+        <thead>
+            <tr>
+                <th>Compound Name</th>
+                <th>Abbreviation</th>
+                <th>Control Compound</th>
+                <th>Download Data</th>
+                <th>See Tested Strains</th>
+            </tr>
+        </thead>
+    </table>
 </div>
 {% endblock %}

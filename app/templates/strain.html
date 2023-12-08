@@ -1,91 +1,106 @@
 {% extends "base.html" %} 
 {% block content %} 
 <script type="text/javascript">
-        $(document).ready(function() {
-            var table = $("#data").DataTable({
-                searching: true,
-                paging: false,
-                ordering: false,
-                info: false,
-                scrollX: true,
-                scrollY: window.innerHeight - 250,
-                scrollCollapse: true,
-                autoWidth: true,
-                ajax: {
-                    url: "/lifespan/strain/data",
-                    dataSrc: ""
-                },
-                columns: [{
-                        data: "strain_name",
-                        render: function(data, type, row, meta) {
-                            if (type === "display") {
-                                data = '<a href="https://cgc.umn.edu/strain/' + data + '">' + data + ' <i class="fa-solid fa-arrow-up-right-from-square"></i></a>';
-                            }
-                            return data;
-                        },
-                    },
-                    {
-                        data: "species_name"
-                    },
-                    {
-                        data: "strain_name",
-                        render: function(data, type, row, meta) {
-                            if (type === "display") {
-                                var csvFileName = 'citp_strain_' + data.toUpperCase().replace(/\s+/g, '_') + '.csv';
-                                var excelFileName = 'citp_strain_' + data.toUpperCase().replace(/\s+/g, '_') + '.xlsx';
+   $(document).ready(function () {
+       var table = $("#data").DataTable({
+           searching: true,
+           paging: false,
+           ordering: false,
+           info: false,
+           scrollY: '70vh' , 
+           scrollCollapse: true ,
+           paging: false ,
+           ajax: {
+               url: "/lifespan/strain/data",
+               dataSrc: ""
+           },
+           columns: [
+               { data: "strain_id" },
+               {
+                   data: "strain_name",
+                   render: function (data, type, row, meta) {
+                       if (type === "display") {
+                           data = '<a href="https://cgc.umn.edu/strain/' + data + '">' + data + ' <i class="fa-solid fa-arrow-up-right-from-square"></i></a>';
+                       }
+                       return data;
+                   },
+               },
+               { data: "species_name" },
+               {
+                   data: "strain_name",
+                   render: function (data, type, row, meta) {
+                       if (type === "display") {
+                        var csvFileName = 'citp_strain_' + data.toUpperCase().replace(/\s+/g, '_') + '.csv';
+                        var excelFileName = 'citp_strain_' + data.toUpperCase().replace(/\s+/g, '_') + '.xlsx';
+            
+                        var csvDownloadLink = '{{ url_for("static", filename="data/data_strain/") }}' + csvFileName;
+                        var excelDownloadLink = '{{ url_for("static", filename="data/data_strain/") }}' + excelFileName;
 
-                                var csvDownloadLink = '{{ url_for("static", filename="downloads/by_strain/") }}' + csvFileName;
-                                var excelDownloadLink = '{{ url_for("static", filename="downloads/by_strain/") }}' + excelFileName;
+                        var csvButton = '<button type="button" class="btn btn-primary btn-sm" onclick="window.location.href=\'' + csvDownloadLink + '\'">CSV</button>';
+                        var excelButton = '<button type="button" class="btn btn-primary btn-sm" onclick="window.location.href=\'' + excelDownloadLink + '\'">Excel</button>';
 
-                                var csvButton = '<button type="button" class="btn btn-primary btn-sm" onclick="window.location.href=\'' + csvDownloadLink + '\'">CSV</button>';
-                                var excelButton = '<button type="button" class="btn btn-primary btn-sm" onclick="window.location.href=\'' + excelDownloadLink + '\'">Excel</button>';
+                        data = csvButton + ' ' + excelButton;
+                       }
+                    return data;
+                   },
+               },
+               {
+                   data: null, 
+                   render: function (data, type, row, meta) {
+                       if (type === "display") {
+                        data = '<button type="button" class="btn btn-primary btn-sm" onclick="window.location.href=\'/lifespan/summary/strain/' + row.strain_name + '\'"><i class="fas fa-arrow-right"></i></button>';
+                       }
+                       return data;
+                   },
+               },
+           ],
+           columnDefs: [
+               {
+                   targets: [0],
+                   visible: false,
 
-                                data = csvButton + ' ' + excelButton;
-                            }
-                            return data;
-                        },
-                    },
-                    {
-                        data: null,
-                        render: function(data, type, row, meta) {
-                            if (type === "display") {
-                                data = '<button type="button" class="btn btn-primary btn-sm" onclick="window.location.href=\'/lifespan/intervention/strain/' + row.strain_name + '\'"><i class="fas fa-arrow-right"></i></button>';
-                            }
-                            return data;
-                        },
-                    },
-                ],
-                columnDefs: [{
-                    targets: [2, 3],
-                    className: 'dt-center',
-                }],
-                dom: "Bfrtip",
-                buttons: [
-                    "print"
-                ]
-            });
-
-            table.on("select deselect", function() {
-                var selectedRows = table.rows({
-                    selected: true
-                }).count();
-                table.button(2).enable(selectedRows > 0);
-                table.button(3).enable(selectedRows > 0);
-            });
-        });
+               },
+               {
+            targets: [1, 2, 3, 4], 
+            className: 'dt-center',
+        },
+        
+           ],
+           dom: "Bfrtip",
+           buttons: [
+               "print"
+           ],
+           lengthMenu: [[10, 25, 50, -1], [10, 25, 50, "All"]],
+           scrollX: true,
+           scrollCollapse: true,
+           autoWidth: true,
+       });
+   
+       table.on("select deselect", function () {
+           var selectedRows = table.rows({ selected: true }).count();
+           table.button(2).enable(selectedRows > 0);
+           table.button(3).enable(selectedRows > 0);
+       });
+   });
 </script>
 <style>
+   .custom-search-bar {
+   text-align: left;
+   margin-left: 10px; 
+   margin-top: 10px; 
+   }
    div.dataTables_wrapper {
    width: 900px; 
    margin: 0 auto; 
    }
 </style>
 <div id="main">
-   <table id="data" class="display compact nowrap" width="100%">
+   <table id="data" class="display compact nowrap" width="100%" style="font-family: 'Arial Narrow', Arial, sans-serif;">
       <thead>
          <tr>
+            <th>ID</th>
             <th>Strain Name</th>
-            <th>Worm Species</th>
+            <th>Species Name</th>
             <th>Download Data</th>
             <th>See Tested Compounds</th>
          </tr>

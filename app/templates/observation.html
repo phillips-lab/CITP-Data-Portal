@@ -1,0 +1,94 @@
+{% extends "base.html" %} 
+{% block content %} 
+<script type="text/javascript">
+   $(document).ready(function () {
+       var table = $("#data").DataTable({
+           searching: true,
+           paging: false,
+           ordering: false,
+           info: false,
+           ajax: {
+               url: "/lifespan/observation/data",
+               dataSrc: ""
+           },
+           columns: [
+               { data: "observation_id" },
+               { data: "observation_date" },
+               { data: "plate_id" },
+               { data: "alive" },
+               { data: "dead" },
+               { data: "censor" },
+               { data: "lost" },
+               { data: "bag" },
+               { data: "extrusion" },
+               { data: "observation_reason" },
+               { data: "observation_notes" },
+               { data: "observation_validated" },
+           ],
+           columnDefs: [
+               {
+                   targets: [0],
+                   visible: false,
+               }
+           ],
+           // Customizing table format
+           dom: "Bfrtip",
+           buttons: [
+               "copy",
+               "csv",
+               "excel",
+               "pdf",
+               "print"
+           ],
+           lengthMenu: [[10, 25, 50, -1], [10, 25, 50, "All"]],
+           scrollX: true,
+           scrollCollapse: true,
+           autoWidth: true,
+       });
+   
+       table.on("select deselect", function () {
+           var selectedRows = table.rows({ selected: true }).count();
+           table.button(2).enable(selectedRows > 0);
+           table.button(3).enable(selectedRows > 0);
+           table.button(4).enable(selectedRows > 0);
+       });
+   });
+</script>
+<style>
+   .custom-search-bar {
+   text-align: left;
+   margin-left: 10px; /* Adjust the value as needed */
+   margin-top: 10px; /* Adjust the value as needed */
+   }
+   /* Add this part to incorporate the scrolling */
+   div.dataTables_wrapper {
+   width: 900px; /* Set the desired width for the table */
+   margin: 0 auto; /* Center the table on the page */
+   }
+</style>
+<div id="main">
+   <div class="table-responsive">
+      <!-- Add the wrapper class to this div -->
+      <div class="dataTables_wrapper">
+         <table id="data" class="display compact nowrap" width="100%" style="font-family: 'Arial Narrow', Arial, sans-serif;">
+            <thead>
+               <tr>
+                  <th>Observation ID</th>
+                  <th>Observation Date</th>
+                  <th>Plate ID</th>
+                  <th>Alive</th>
+                  <th>Dead</th>
+                  <th>Censor</th>
+                  <th>Lost</th>
+                  <th>Bag</th>
+                  <th>Extrusion</th>
+                  <th>Observation Reason</th>
+                  <th>Observation Notes</th>
+                  <th>Observation Validated</th>
+               </tr>
+            </thead>
+         </table>
+      </div>
+   </div>
+</div>
+{% endblock %}
