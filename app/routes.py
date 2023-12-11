@@ -27,7 +27,7 @@ def pub(pub_id):
 
 @app.route("/lifespan/pub/data")
 def pub_data():
-    sql = "SELECT * FROM pub_table ORDER BY year, author, dataset_name"
+    sql = "SELECT * FROM pub_dataset_table ORDER BY year, author, dataset_name"
     engine = db.create_engine("sqlite:///citp-data-portal.db")
     table = pd.read_sql(sql, engine)
     return table.reset_index().to_json(orient="records")
