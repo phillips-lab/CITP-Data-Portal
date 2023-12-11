@@ -1,7 +1,12 @@
 h2,
-h3 {
+h3,
+h4  {
 	font-family: "Gill Sans", Helvetica, sans-serif;
 	text-align: center;
+}
+
+h2,
+h3 {
 	border-radius: 18px;
 	background: #fff6e9;
 	padding: 5px;
@@ -15,16 +20,6 @@ h2 {
 
 h3 {
 	margin-top: 30px;
-}
-
-#data table {
-	width: 90%;
-	border-collapse: collapse;
-	margin: 0 auto;
-}
-
-#data tr:nth-child(even) {
-	background-color: #f2f2f2;
 }
 
 #navbar-wrap {
