@@ -52,8 +52,6 @@
             buttons: ["print"],
         });
 
-        table.columns([0, 1, 2, 3, 4]).orderable(true);
-
         if ("{{ comp }}" !== "") {
             table.column(1).search("{{ comp }}", true, false, true).draw();
         }
@@ -61,6 +59,8 @@
         if ("{{ strain }}" !== "") {
             table.column(3).search("{{ strain }}", true, false, true).draw();
         }
+	
+        table.columns([1, 2, 3, 4]).orderable(true);
 
         table.on("select deselect", function() {
             var selectedRows = table.rows({ selected: true }).count();
