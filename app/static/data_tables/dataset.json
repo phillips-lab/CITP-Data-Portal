@@ -1,0 +1,42 @@
+[
+    {
+        "manuscript_id": 2000,
+        "doi": "10.1111/acel.13488",
+        "author": "Onken M, et al.",
+        "journal": "Aging Cell e13488",
+        "dataset_name": "AgingCell_metformin",
+        "year": 2021
+    },
+    {
+        "manuscript_id": 2000,
+        "doi": "10.1111/acel.13488",
+        "author": "Onken M, et al.",
+        "journal": "Aging Cell e13488",
+        "dataset_name": "AgingCell_antidiabetic",
+        "year": 2021
+    },
+    {
+        "manuscript_id": 1000,
+        "doi": "10.1038/ncomms14256",
+        "author": "Lucanic M, et al.",
+        "journal": "Nat Commun 8:14256",
+        "dataset_name": "NatureComm_lifespan_doseresponse",
+        "year": 2017
+    },
+    {
+        "manuscript_id": 1000,
+        "doi": "10.1038/ncomms14256",
+        "author": "Lucanic M, et al.",
+        "journal": "Nat Commun 8:14256",
+        "dataset_name": "NatureComm_lifespan_chemical",
+        "year": 2017
+    },
+    {
+        "manuscript_id": 3000,
+        "doi": "10.1007/s11357-019-00108-9",
+        "author": "Banse, et al.",
+        "journal": "GeroScience 41:945\u2013960",
+        "dataset_name": "GeroScience_ALM",
+        "year": 2019
+    }
+]

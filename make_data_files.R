@@ -33,6 +33,21 @@ dbDisconnect(con)
 
 
 # ================================================================================
+# PUB DATASET TABLE
+
+con <- dbConnect(Postgres(), host=DB_HOST, dbname=DB_NAME, port=DB_PORT, user=DB_USER, password=DB_PWD)
+tab <- dbGetQuery(con, "SELECT manuscript_table.manuscript_id, doi, author, journal, dataset_name, year FROM manuscript_table JOIN dataset_table ON manuscript_table.manuscript_id = dataset_table.manuscript_id")
+dbDisconnect(con)
+
+sink("data_tables/tmp.json")
+cat(toJSON(tab, na="null"))
+sink()
+system(paste0("python3 -m json.tool data_tables/tmp.json > data_tables/dataset.json"))
+unlink("data_tables/tmp.json")
+
+
+
+# ================================================================================
 # DATASET DOWNLOAD FILES
 
 con <- dbConnect(Postgres(), host=DB_HOST, dbname=DB_NAME, port=DB_PORT, user=DB_USER, password=DB_PWD)
@@ -47,7 +62,7 @@ dbDisconnect(con)
 
 all.dsets <- data.frame()
 
-# qery the data
+# query the data
 for(i in 1:length(dsets)) {
   
   xdset.s <- subset(xdset, dataset_name==dsets[i])
@@ -80,21 +95,36 @@ for(i in 1:length(dsets)) {
 # ================================================================================
 # INTERVENTION TABLE
 
-interv <- unique(all.dsets[c("Strain","Species","Compound","doi")])
-interv <- subset(interv, !(Compound %in% c("CTRL_H2O","CTRL_DMSO")))
-interv <- merge(interv, all.comps, by.x="Compound", by.y="comp_name")
-interv$control_name[interv$control_name=="CTRL_H2O"] <- "H2O"
-interv$control_name[interv$control_name=="CTRL_DMSO"] <- "DMSO"
-interv <- merge(interv, all.pubs, by="doi")
-interv$pub <- paste0(interv$author," (",interv$year,")")
-interv <- interv[order(interv$year, interv$Compound, interv$Strain),]
-interv <- interv[c("comp_display_name","comp_abbr","control_name","Strain","pub","doi","pubchem_id")]
-colnames(interv)[4] <- "strain_name"
+tab <- unique(all.dsets[c("Strain","Species","Compound","doi")])
+tab <- subset(tab, !(Compound %in% c("CTRL_H2O","CTRL_DMSO")))
+tab <- merge(tab, all.comps, by.x="Compound", by.y="comp_name")
+tab$control_name[tab$control_name=="CTRL_H2O"] <- "H2O"
+tab$control_name[tab$control_name=="CTRL_DMSO"] <- "DMSO"
+tab <- merge(tab, all.pubs, by="doi")
+tab$pub <- paste0(tab$author," (",tab$year,")")
+tab <- tab[order(tab$year, tab$Compound, tab$Strain),]
+tab <- tab[c("comp_display_name","comp_abbr","control_name","Strain","pub","doi","pubchem_id")]
+colnames(tab)[4] <- "strain_name"
 
 sink("data_tables/tmp.json")
-cat(toJSON(interv, na="null"))
+cat(toJSON(tab, na="null"))
 sink()
 system(paste0("python3 -m json.tool data_tables/tmp.json > data_tables/intervention.json"))
+unlink("data_tables/tmp.json")
+
+
+
+# ================================================================================
+# COMPOUND TABLE
+
+con <- dbConnect(Postgres(), host=DB_HOST, dbname=DB_NAME, port=DB_PORT, user=DB_USER, password=DB_PWD)
+tab <- dbGetQuery(con, "SELECT all_compounds_table.comp_id, comp_name, comp_abbr, control_name, comp_display_name, pubchem_id FROM all_compounds_table JOIN compound_metadata_table ON all_compounds_table.comp_id = compound_metadata_table.comp_id WHERE active_comp = TRUE")
+dbDisconnect(con)
+
+sink("data_tables/tmp.json")
+cat(toJSON(tab, na="null"))
+sink()
+system(paste0("python3 -m json.tool data_tables/tmp.json > data_tables/compound.json"))
 unlink("data_tables/tmp.json")
 
 
@@ -135,6 +165,21 @@ for (i in 1:nrow(comp)) {
   saveWorkbook(wb, paste0("downloads/by_comp/citp_compound_",comp$comp_abbr[i],".xlsx"), overwrite=TRUE)
   
 }
+
+
+
+# ================================================================================
+# STRAIN TABLE
+
+con <- dbConnect(Postgres(), host=DB_HOST, dbname=DB_NAME, port=DB_PORT, user=DB_USER, password=DB_PWD)
+tab <- dbGetQuery(con, "SELECT strain_id, strain_name, species_name FROM all_strains_table where active_strain = TRUE")
+dbDisconnect(con)
+
+sink("data_tables/tmp.json")
+cat(toJSON(tab, na="null"))
+sink()
+system(paste0("python3 -m json.tool data_tables/tmp.json > data_tables/strain.json"))
+unlink("data_tables/tmp.json")
 
 
 

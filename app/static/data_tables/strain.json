@@ -1,0 +1,122 @@
+[
+    {
+        "strain_id": 1000,
+        "strain_name": "N2_PD1073",
+        "species_name": "C. elegans"
+    },
+    {
+        "strain_id": 1010,
+        "strain_name": "AF16",
+        "species_name": "C. briggsae"
+    },
+    {
+        "strain_id": 1020,
+        "strain_name": "QG834",
+        "species_name": "C. tropicalis"
+    },
+    {
+        "strain_id": 1030,
+        "strain_name": "ED3092",
+        "species_name": "C. briggsae"
+    },
+    {
+        "strain_id": 1040,
+        "strain_name": "MY16",
+        "species_name": "C. elegans"
+    },
+    {
+        "strain_id": 1050,
+        "strain_name": "JU1373",
+        "species_name": "C. tropicalis"
+    },
+    {
+        "strain_id": 1060,
+        "strain_name": "JU775",
+        "species_name": "C. elegans"
+    },
+    {
+        "strain_id": 1070,
+        "strain_name": "JU1630",
+        "species_name": "C. tropicalis"
+    },
+    {
+        "strain_id": 1080,
+        "strain_name": "HK104",
+        "species_name": "C. briggsae"
+    },
+    {
+        "strain_id": 1090,
+        "strain_name": "N2",
+        "species_name": "C. elegans"
+    },
+    {
+        "strain_id": 1100,
+        "strain_name": "NL130",
+        "species_name": "C. elegans"
+    },
+    {
+        "strain_id": 1110,
+        "strain_name": "NL152",
+        "species_name": "C. elegans"
+    },
+    {
+        "strain_id": 1120,
+        "strain_name": "AQ351",
+        "species_name": "C. elegans"
+    },
+    {
+        "strain_id": 1390,
+        "strain_name": "JU1348",
+        "species_name": "C. briggsae"
+    },
+    {
+        "strain_id": 3002,
+        "strain_name": "NIC122",
+        "species_name": "C. tropicalis"
+    },
+    {
+        "strain_id": 3009,
+        "strain_name": "QG131",
+        "species_name": "C. tropicalis"
+    },
+    {
+        "strain_id": 3000,
+        "strain_name": "CB4856",
+        "species_name": "C. elegans"
+    },
+    {
+        "strain_id": 3001,
+        "strain_name": "ED3040",
+        "species_name": "C. elegans"
+    },
+    {
+        "strain_id": 3005,
+        "strain_name": "JU1088",
+        "species_name": "C. elegans"
+    },
+    {
+        "strain_id": 3006,
+        "strain_name": "JU1264",
+        "species_name": "C. briggsae"
+    },
+    {
+        "strain_id": 3007,
+        "strain_name": "JU1652",
+        "species_name": "C. elegans"
+    },
+    {
+        "strain_id": 3003,
+        "strain_name": "NIC20",
+        "species_name": "C. briggsae"
+    },
+    {
+        "strain_id": 3010,
+        "strain_name": "QR25",
+        "species_name": "C. briggsae"
+    },
+    {
+        "strain_id": 3008,
+        "strain_name": "JU726",
+        "species_name": "C. briggsae"
+    }
+]

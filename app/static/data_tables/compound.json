@@ -1,0 +1,146 @@
+[
+    {
+        "comp_id": 1020,
+        "comp_name": "alpha_ketoglutarate",
+        "comp_abbr": "AKG",
+        "control_name": "CTRL_H2O",
+        "comp_display_name": "alpha-Ketoglutarate",
+        "pubchem_id": 164533
+    },
+    {
+        "comp_id": 1030,
+        "comp_name": "alpha_lipoic_acid",
+        "comp_abbr": "ALA",
+        "control_name": "CTRL_H2O",
+        "comp_display_name": "alpha-Lipoic acid",
+        "pubchem_id": 864
+    },
+    {
+        "comp_id": 1040,
+        "comp_name": "Aspirin",
+        "comp_abbr": "ASP",
+        "control_name": "CTRL_DMSO",
+        "comp_display_name": "Aspirin",
+        "pubchem_id": 2244
+    },
+    {
+        "comp_id": 1050,
+        "comp_name": "curcumin",
+        "comp_abbr": "CURC",
+        "control_name": "CTRL_DMSO",
+        "comp_display_name": "Curcumin",
+        "pubchem_id": 969516
+    },
+    {
+        "comp_id": 1060,
+        "comp_name": "np1",
+        "comp_abbr": "NP1",
+        "control_name": "CTRL_DMSO",
+        "comp_display_name": "NP1",
+        "pubchem_id": null
+    },
+    {
+        "comp_id": 1070,
+        "comp_name": "propyl_gallate",
+        "comp_abbr": "PG",
+        "control_name": "CTRL_DMSO",
+        "comp_display_name": "Propyl gallate",
+        "pubchem_id": 4947
+    },
+    {
+        "comp_id": 1080,
+        "comp_name": "quercetin",
+        "comp_abbr": "QUER",
+        "control_name": "CTRL_DMSO",
+        "comp_display_name": "Quercetin",
+        "pubchem_id": 5280343
+    },
+    {
+        "comp_id": 1090,
+        "comp_name": "resveratrol",
+        "comp_abbr": "RSVTL",
+        "control_name": "CTRL_DMSO",
+        "comp_display_name": "Resveratrol",
+        "pubchem_id": 445154
+    },
+    {
+        "comp_id": 1100,
+        "comp_name": "thioflavin_t",
+        "comp_abbr": "THIOT",
+        "control_name": "CTRL_H2O",
+        "comp_display_name": "Thioflavin T",
+        "pubchem_id": 16953
+    },
+    {
+        "comp_id": 1110,
+        "comp_name": "valproic_acid",
+        "comp_abbr": "VALPRO",
+        "control_name": "CTRL_H2O",
+        "comp_display_name": "Valproic acid",
+        "pubchem_id": 3121
+    },
+    {
+        "comp_id": 1190,
+        "comp_name": "metformin",
+        "comp_abbr": "METFO",
+        "control_name": "CTRL_H2O",
+        "comp_display_name": "Metformin",
+        "pubchem_id": 4091
+    },
+    {
+        "comp_id": 1260,
+        "comp_name": "nateglinide",
+        "comp_abbr": "NATE",
+        "control_name": "CTRL_DMSO",
+        "comp_display_name": "Nateglinide",
+        "pubchem_id": 5311309
+    },
+    {
+        "comp_id": 1270,
+        "comp_name": "pioglitazone",
+        "comp_abbr": "PIOG",
+        "control_name": "CTRL_DMSO",
+        "comp_display_name": "Pioglitazone",
+        "pubchem_id": 4829
+    },
+    {
+        "comp_id": 1280,
+        "comp_name": "sitagliptin",
+        "comp_abbr": "SITAG",
+        "control_name": "CTRL_DMSO",
+        "comp_display_name": "Sitagliptin",
+        "pubchem_id": 4369359
+    },
+    {
+        "comp_id": 1300,
+        "comp_name": "untreated",
+        "comp_abbr": "UNT",
+        "control_name": "None",
+        "comp_display_name": "Untreated",
+        "pubchem_id": null
+    },
+    {
+        "comp_id": 1310,
+        "comp_name": "dapagliflozin",
+        "comp_abbr": "DAPAG",
+        "control_name": "CTRL_DMSO",
+        "comp_display_name": "Dapagliflozin",
+        "pubchem_id": 9887712
+    },
+    {
+        "comp_id": 1330,
+        "comp_name": "glipizide",
+        "comp_abbr": "GLIPZ",
+        "control_name": "CTRL_DMSO",
+        "comp_display_name": "Glipizide",
+        "pubchem_id": 3478
+    },
+    {
+        "comp_id": 1340,
+        "comp_name": "bromocriptine",
+        "comp_abbr": "BROMO",
+        "control_name": "CTRL_DMSO",
+        "comp_display_name": "Bromocriptine",
+        "pubchem_id": 31101
+    }
+]
